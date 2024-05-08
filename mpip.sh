@@ -9,8 +9,7 @@ function mpip() {
         echo "venv: Active"
         echo "cmd: ${CMD}, arg: [${ARG}]"
         SRC=$(realpath "${VIRTUAL_ENV}/Scripts/python.exe")
-        echo "line: ${SRC} -m pip ${CMD} ${ARG}"
+        # SRC=$(realpath "${VIRTUAL_ENV}/bin/python3")
         ${SRC} -m pip ${CMD} ${ARG}
     fi
 }
-
